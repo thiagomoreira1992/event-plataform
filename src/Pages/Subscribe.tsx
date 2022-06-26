@@ -3,29 +3,26 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
-import '../assets/code-mockup.png';
-
-
-
+import img from "../assets/code-mockup.png";
 
 export function Subscribe() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const [createSubscriber, { loading }] = useCreateSubscriberMutation()
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
   async function handleSubscribe(event: FormEvent) {
     event.preventDefault();
 
     await createSubscriber({
-        variables:{
-            name,
-            email
-        }
-    })
+      variables: {
+        name,
+        email,
+      },
+    });
 
-    navigate('/event');
+    navigate("/event");
   }
 
   return (
@@ -74,7 +71,10 @@ export function Subscribe() {
           </form>
         </div>
       </div>
-      <img src="/src/assets/code-mockup.png" alt="" className="mt-10" />
+      <img
+        src="https://live.staticflickr.com/65535/52173840892_bff59fc68a_o.png"
+        alt="code-mockup"
+      />
     </div>
   );
 }
