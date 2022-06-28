@@ -26,23 +26,23 @@ export function Subscribe() {
   }
 
   return (
-    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="max-w-[640px] ">
+    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center overflow-hidden ">
+      <div className="w-full max-w-[1100px] flex flex-col items-center justify-between mt-20 mx-auto sm:flex-row">
+        <div className="max-w-[640px] mx-6 flex flex-col items-center sm:items-start">
           <Logo />
-          <h1 className="mt-8 text-[2.5rem] leading-tight">
+          <h1 className="mt-8 text-3xl text-center sm:text-[2.5rem] sm:text-left leading-tight ">
             Construa uma{" "}
             <strong className="text-blue-500">aplicação completa</strong>, do
-            zero, com <strong className="text-blue-500">React</strong>
+            zero, com <strong className="text-blue-500">React JS</strong>
           </h1>
-          <p className="mt-4 text-gray-200 leading-relaxed">
+          <p className="mt-4 text-gray-200 text-center leading-relaxed sm:text-left">
             Em apenas uma semana você vai dominar na prática uma das tecnologias
             mais utilizadas e com alta demanda para acessar as melhores
             oportunidades do mercado.
           </p>
         </div>
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded">
-          <strong className="text-3xl mb-6 block">
+        <div className="w-full sm:w-auto p-8 bg-gray-700 border border-gray-500 rounded mt-4 sm:mt-0">
+          <strong className="text-lg sm:text-3xl mb-6 block">
             Inscreva-se gratuitamente
           </strong>
           <form
@@ -74,6 +74,7 @@ export function Subscribe() {
       <img
         src="https://live.staticflickr.com/65535/52173840892_bff59fc68a_o.png"
         alt="code-mockup"
+        className="mt-10 object-cover"
       />
     </div>
   );
